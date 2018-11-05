@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<div id="slideImg">
+		<div class="slideMain">
+			<ul class="slide1">
+				<img src="https://3.bp.blogspot.com/-Ycm5HXP5RV4/Wz-3ECXt8BI/AAAAAAAAGmI/3sLUhTPxAecHSh2Lgy6tWXs5O0Spwho5ACLcBGAs/s1600/Capture%2B%252856%2529.PNG">
+                    <img src= "https://i2.wp.com/ramenswag.com/wp-content/uploads/2016/12/naruto-wallpaper.jpg?w=1131&ssl=1">
+                    <img src="https://i.pinimg.com/474x/66/8f/cb/668fcb8f6f6407355852f65ce127b1a0.jpg">
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h1>Nicholas Mohabir</h1>
+            <p>Hack club Member</p>
+            <p>Anime is life!</p>
+            <p><button id="gifButton">Click me!</button></p>
+        </div>
+        <img id="gif" class="hidden" src="https://66.media.tumblr.com/8c5613facac238202c27414a05ddd7f8/tumblr_ozu3fefv9U1wdgt9zo2_r1_500.gif">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script
+			  src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+			  integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+			  crossorigin="anonymous"></script>
+        <script src="movement.js"></script>
+        <script>
+            var delay=1700;
+            $(document).ready(function(){
+                $("#slideImg").rotate();
+                $("#gifButton").click(function(){
+                    $("#gif").switchClass("hidden", "dragon-surprise");
+                    setTimeout(function(){$("#gif").switchClass("dragon-surprise", "hidden")}, delay);
+                });
+            });
+        </script>
+    </body>
+</html>
